@@ -13,6 +13,7 @@
  */
 function isString(str) {
   // write your code here & return
+  return typeof str === 'string';
 }
 
 /**
@@ -22,6 +23,7 @@ function isString(str) {
  */
 function isBlank(str) {
   // write your code here & return
+  return str === '';
 }
 
 /**
@@ -34,6 +36,7 @@ function isBlank(str) {
  */
 function sayHelloOrBye(name, num) {
   // write your code here & return
+  return num === 0 ? `Hello ${name}` : `Bye ${name}`;
 }
 
 /**
@@ -45,6 +48,7 @@ function sayHelloOrBye(name, num) {
  */
 function compareStrings(str1, str2) {
   // write your code here & return
+  return str1 === str2;
 }
 
 module.exports = {

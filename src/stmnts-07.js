@@ -1,3 +1,5 @@
+/* eslint-disable default-case */
+/* eslint-disable no-plusplus */
 /*
  * stmnts-07.js
  * Language: javascript
@@ -14,6 +16,7 @@
  */
 function logicalAnd(a, b) {
   // write your code here & return
+  return a && b;
 }
 
 /**
@@ -24,6 +27,7 @@ function logicalAnd(a, b) {
  */
 function logicalOr(a, b) {
   // write your code here & return
+  return a || b;
 }
 
 /**
@@ -33,6 +37,7 @@ function logicalOr(a, b) {
  */
 function invertBoolean(bool) {
   // write your code here & return
+  return !bool;
 }
 
 /**
@@ -49,7 +54,13 @@ function invertBoolean(bool) {
  * ? [JavaScript: The Definitive Guide, Chapter 5.4.3](https://bit.ly/39hrIlW)
  */
 function numberOfOdds(num) {
-  // write your code here & return
+  let oddCount = 0;
+  for (let i = 0; i < num; i++) {
+    if (i % 2 !== 0) {
+      oddCount++;
+    }
+  }
+  return oddCount;
 }
 
 /**
@@ -63,6 +74,11 @@ function numberOfOdds(num) {
  */
 function addUpTheNumbers(num) {
   // write your code here & return
+  let sum = 0;
+  for (let i = 0; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -82,6 +98,25 @@ function addUpTheNumbers(num) {
  */
 function gradeGenerator(score) {
   // write your code here & return
+  let letterGrade;
+  switch (true) {
+    case score < 60:
+      letterGrade = 'F';
+      break;
+    case score < 70:
+      letterGrade = 'D';
+      break;
+    case score < 80:
+      letterGrade = 'C';
+      break;
+    case score < 90:
+      letterGrade = 'B';
+      break;
+    case score <= 100:
+      letterGrade = 'A';
+      break;
+  }
+  return letterGrade;
 }
 
 /**
@@ -101,6 +136,10 @@ function gradeGenerator(score) {
  */
 function getGrade(name, score) {
   // write your code here & return
+  const letterGrade = gradeGenerator(score);
+  return 'AEF'.includes(letterGrade)
+    ? `${name} got an ${letterGrade}`
+    : `${name} got a ${letterGrade}`;
 }
 
 module.exports = {

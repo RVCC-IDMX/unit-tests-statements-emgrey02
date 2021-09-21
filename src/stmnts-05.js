@@ -13,8 +13,8 @@
  */
 function isOdd(num) {
   // write your code here & return
+  return num % 2 !== 0;
 }
-
 /**
  * Check if a number is odd
  * @param {number} num - number to check
@@ -22,6 +22,7 @@ function isOdd(num) {
  */
 function isEven(num) {
   // write your code here & return
+  return num % 2 === 0;
 }
 
 /**
@@ -31,6 +32,7 @@ function isEven(num) {
  */
 function isNegative(value) {
   // write your code here & return
+  return value < 0;
 }
 
 module.exports = {
